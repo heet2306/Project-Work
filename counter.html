@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+        background: linear-gradient(to left,red,blue);
+        }
+        #counter,p{
+            color:white;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    <p>COUNTS DECREMENT</p>
+    <div id="counter">
+        <!-- counts -->
+    </div>
+  
+    <script>
+        let counts=setInterval(updated);
+        let upto=1000;
+        function updated(){
+            var count= document.getElementById("counter");
+            count.innerHTML=--upto;
+            if(upto === 0) {
+                clearInterval(counts);
+            }
+        }
+    </script>
+</body>
+</html>
